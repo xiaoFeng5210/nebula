@@ -1,0 +1,265 @@
+@import './color.scss';
+@import './element-variables.scss';
+
+* {
+    box-sizing: border-box;
+    outline: none;
+    scrollbar-color: #c1c1c1 #f1f1f1; /* 滑块颜色  滚动条背景颜色 */
+    scrollbar-width: thin; /* 滚动条宽度有三种：thin、auto、none */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft YaHei, Arial, Helvetica, sans-serif; // 基础，苹果，非衬线字体
+    background: #f1f1f1; // 背景颜色灰色
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+    width: 6px;  /*滚动条宽度*/
+    height: 16px;  /*滚动条高度*/
+}
+::-ms-scrollbar {
+    width: 6px;  /*滚动条宽度*/
+    height: 16px;  /*滚动条高度*/
+}
+::-o-scrollbar {
+    width: 6px;  /*滚动条宽度*/
+    height: 16px;  /*滚动条高度*/
+}
+::-moz-scrollbar {
+    width: 6px;  /*滚动条宽度*/
+    height: 16px;  /*滚动条高度*/
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+    border-radius: 10px;  /*滚动条的背景区域的圆角*/
+    background-color: #f1f1f1;/*滚动条的背景颜色*/  
+}
+::-ms-scrollbar-track {
+    border-radius: 10px;  /*滚动条的背景区域的圆角*/
+    background-color: #f1f1f1;/*滚动条的背景颜色*/  
+}
+::-o-scrollbar-track {
+    border-radius: 10px;  /*滚动条的背景区域的圆角*/
+    background-color: #f1f1f1;/*滚动条的背景颜色*/  
+}
+::-moz-scrollbar-track {
+    border-radius: 10px;  /*滚动条的背景区域的圆角*/
+    background-color: #f1f1f1;/*滚动条的背景颜色*/  
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;  /*滚动条的圆角*/
+    background-color: #c1c1c1;  /*滚动条的背景颜色*/
+}
+::-ms-scrollbar-thumb {
+    border-radius: 10px;  /*滚动条的圆角*/
+    background-color: #c1c1c1;  /*滚动条的背景颜色*/
+}
+::-o-scrollbar-thumb {
+    border-radius: 10px;  /*滚动条的圆角*/
+    background-color: #c1c1c1;  /*滚动条的背景颜色*/
+}
+::-moz-scrollbar-thumb {
+    border-radius: 10px;  /*滚动条的圆角*/
+    background-color: #c1c1c1;  /*滚动条的背景颜色*/
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+a {
+    color: #999; // 标签颜色
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+// 清除浮动
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+// 显示一行多余字体隐藏
+.lineOne {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+@function px2rem($px) {
+    $rem: 19.2;
+    @return ($px/$rem)+rem;
+}
+
+// text-align
+@each $var in (left, center, right) {
+    .text-#{$var} {
+        text-align: $var
+    }
+}
+
+$base-font-size: 1rem;
+
+// font-size
+$font-sizes: (xs: 0.5,
+    sm: 0.8,
+    md: 1.1,
+    lg: 1.3,
+    xl: 1.5);
+
+@each $key,
+$var in $font-sizes {
+    .fs-#{$key} {
+        font-size: $var * $base-font-size
+    }
+}
+
+// 水平布局
+.d-flex {
+    display: flex; // 显示为flex布局
+}
+
+//内联样式
+.din-flex {
+    display: inline-flex; // 显示为flex布局
+}
+
+// 垂直布局
+.flex-column {
+    flex-direction: column
+}
+
+// 主轴对齐方式
+$flex-jc: ('start': flex-start,
+    'end': flex-end,
+    'center': center,
+    'between': space-between,
+    'around': space-around);
+
+@each $key,
+$var in $flex-jc {
+    .jc-#{$key} {
+        justify-content: $var;
+    }
+}
+
+// 交叉轴对齐方式
+$flex-ai: ('start': flex-start,
+    'end': flex-end,
+    'center': center,
+    'baseline': baseline,
+    'stretch': stretch);
+
+@each $key,
+$var in $flex-ai {
+    .ai-#{$key} {
+        align-items: $var
+    }
+}
+
+//是否换行
+$flex-wrap: ('nowrap': nowrap,
+    'wrap': wrap,
+    'reverse': wrap-reverse);
+
+@each $key,
+$var in $flex-wrap {
+    .wr-#{$key} {
+        flex-wrap: $var
+    }
+}
+
+// 占满剩余空间
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+// spacing
+$spacing-types: (m: margin, p: padding);
+$spacing-directions: (t: top,
+    b: bottom,
+    l: left,
+    r: right,
+);
+$spacing-base-size: 1rem;
+$spacing-sizes: (0: 0,
+    1: 0.25,
+    2: 0.5,
+    3: 1,
+    4: 1.5,
+    5: 3,
+);
+
+@each $typeKey,
+$type in $spacing-types {
+
+    @each $sizeKey,
+    $size in $spacing-sizes {
+
+        // m-1
+        .#{$typeKey}-#{$sizeKey} {
+            #{$type}: $size * $spacing-base-size
+        }
+
+        // mx-1
+        .#{$typeKey}x-#{$sizeKey} {
+            #{$type}-left: $size * $spacing-base-size;
+            #{$type}-right: $size * $spacing-base-size;
+        }
+
+        // my-1
+        .#{$typeKey}y-#{$sizeKey} {
+            #{$type}-top: $size * $spacing-base-size;
+            #{$type}-bottom: $size * $spacing-base-size;
+        }
+    }
+
+    // mx-1
+    @each $directionKey,
+    $direction in $spacing-directions {
+
+        @each $sizeKey,
+        $size in $spacing-sizes {
+            .#{$typeKey}#{$directionKey}-#{$sizeKey} {
+                #{$type}-#{$direction}: $size * $spacing-base-size
+            }
+        }
+    }
+}

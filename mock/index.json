@@ -1,0 +1,71 @@
+{
+  "getTree": {
+    "code": 200,
+    "data": "",
+    "msg": "请求成功"
+  },
+  "getPara": {
+    "code": 200,
+    "data": "",
+    "msg": "请求成功"
+  },
+  "login": {
+    "code": 10002,
+    "data": "",
+    "msg": "请求成功"
+  },
+  "sign": {
+    "code": 200,
+    "data": "",
+    "msg": "请求成功"
+  },
+  "abc": {
+    "code": 200,
+    "data": "",
+    "msg": "请求成功"
+  },
+  "qjj": {
+    "code": 200,
+    "data": {
+      "rows": [
+        { "id": 1, "Name": "项目1" },
+        { "id": 2, "Name": "项目2" },
+        { "id": 3, "Name": "项目3" }
+      ]
+    },
+    "msg": "请求成功"
+  },
+  "ghj": {
+    "code": 200,
+    "data": {
+      "rows": [
+        {
+          "id": 1,
+          "PjType": 1,
+          "PjColony": [],
+          "PjName": "项目名称1号",
+          "PjIntroduce": "项目简介",
+          "Pjproject": 80,
+          "Pjcreate": 96,
+          "PjImg": "",
+          "PjAcountId": 1,
+          "PjTime": "2020-06-11"
+        },
+        {
+          "id": 2,
+          "PjType": 2,
+          "PjColony": [1, 2],
+          "PjName": "项目名称2号",
+          "PjIntroduce": "项目简介",
+          "PjImg": "../assets/loginImages/timg.jpg",
+          "Pjproject": 804,
+          "Pjcreate": 52869,
+          "PjAcountId": 2,
+          "PjTime": "2020-06-11"
+        }
+      ],
+      "total": 2
+    },
+    "msg": "请求成功"
+  }
+}

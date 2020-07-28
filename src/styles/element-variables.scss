@@ -1,0 +1,56 @@
+/*
+Write your variables here. All available variables can be
+found in element-ui/packages/theme-chalk/src/common/var.scss.
+For example, to overwrite the theme color:
+*/
+$--color-primary: #3759A0;
+$--color-warning: #FF993F;
+$--color-danger: #FF3F4A;
+
+/*禁止抖动
+表单验证信息出现时页面抖动
+*/
+.reprint-remark-form .el-form-item__error {
+  transition: none !important;
+}
+
+/*禁止抖动
+多选框选中时页面抖动
+*/
+.el-checkbox ::after {
+  transition: none !important;
+}
+
+/*禁止抖动
+单选框选中时页面抖动
+*/
+.el-radio ::after {
+  transition: none !important;
+}
+
+/*禁止抖动
+下拉框触发时页面抖动
+*/
+.el-icon-caret-right {
+  transition: none !important;
+}
+
+/*禁止抖动
+element中的icon之一
+*/
+.el-input__icon {
+  transition: none !important;
+}
+
+/*禁止抖动
+el-tab标签页切换时页面抖动
+*/
+.el-tabs__active-bar {
+  transition: none !important;
+}
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+
+@import "~element-ui/packages/theme-chalk/src/index";

@@ -1,0 +1,88 @@
+$col: #f9f9f9;
+$bor:#1a78f3;
+$gre:#666666;
+$deepGre:#999999;
+$btn:#3759A0;
+$font:#3759A0;
+$span:#899194;
+$bgColor:#ffffff;
+$absColor:red;
+$leftColor1:#63C0FF;
+$rightColor1:#093CA7;
+$leftColor2:#FFE985;
+$rightColor2:#FA742B;
+$leftColor3:#5EFCE8;
+$rightColor3:#736EFE;
+$leftColor4:#FFF6B7;
+$rightColor4:#F6416C;
+$greyClolor:#D4D4D4;
+$agreement:#FF993F;
+$eorr:#FF3F4A;
+$news: #FF7070;
+//个人中心
+$inputplace:#202124;
+$bluebor:#3759A0;
+$borderBg:#E9ECF3;
+$selfbor:#C4C4C4;
+$selfTitle:#525A5D;
+$title:#666666;
+$leftfontC:#899194;
+$rightfontC:#222A2D;
+// 公告详情
+$garkGrey:#525A5D;
+$input:#DCDFE6;
+$bottom:#B3B8BA;
+//Header
+$headerTab:rgba(255, 255, 255, 0.70);
+$active:#1B408D;
+$elInput:#EDEDED;
+$topsFont:#999999;
+
+//设置
+$btnbor:#F1F2F7;
+$btnhover:#FF3F4A;
+$btnprim:#0098FF;
+$btnprimh:#0088FF;
+
+// 企业管理
+$bgTitles: #E4E6EC;
+$itemson:#F1F2F7;
+$progressSpan: rgba(154, 170, 186, 1);
+
+//资料
+$bors:#DCDEE2;
+
+// 场景
+$borBottom:#E5E5E5;
+$scene_bg:#EDF0F5;
+$view_bg:#F1F2F7;
+$close_bg:#D9D9D9;
+$fixeBg:#1E325B;
+
+// 模型管理 -- 上传管理
+$shadow: 0px 3px 8px rgba(0, 0, 0, 0.09);
+$stepColor: #3759A0;
+$treeColor: #4C495B;
+$treeLine: #9C9A98;
+
+// colors map类型
+$colors: ('primary': #3759A0,
+    'white': #fff,
+    'grey': #4C495B,
+    'dark': #333333,
+    'res': #FF3F4A,
+    'suce': #67c23a,
+    'deter': #FF7070
+);
+
+// text-color bg-color
+@each $key,
+$var in $colors {
+    .text-#{$key} {
+        color: $var;
+    }
+
+    .bg-#{$key} {
+        background-color: $var
+    }
+}
